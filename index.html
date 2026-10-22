@@ -9,8 +9,38 @@
     <body>
         <div class="top-section">
             <span>Books</span>
-            <button>+ Add book</button>
+            <button id="open-add-book-dialog">+ Add book</button>
         </div>
+        <dialog id="add-book-dialog" aria-labelledby="form-title">
+            <form method="dialog">
+                <button class="close-form" aria-lable="Close form">Close</button>
+
+                <h2 id="form-title">Add book</h2>
+                <label for="name">Book name</label>
+                <input id="name" name="name" autocomplete="name" required>
+
+                <label for="author"></label>
+                <input id="author" name="author" autocomplete="author">
+
+                <label for="pages"></label>
+                <input id="pages" name="pages" type="number">
+
+                <label for="description"></label>
+                <textarea id="description" name="description" rows="4"></textarea>
+
+                <button>Complete</button>
+            </form>
+        </dialog>
+        <script>
+            const dialog = document.querySelector("#add-book-dialog");
+
+            document.querySelector("#open-add-book-dialog").addEventListener("click", () => {
+                dialog.showModal();
+            });
+            dialog.querySelector(".close-form").addEventListener("click", () => {
+                dialog.close();
+            });
+        </script>
         <div class="page-line"></div>
         <div class="card">
             <div class="card-detail">
