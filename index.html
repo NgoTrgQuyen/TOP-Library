@@ -25,14 +25,36 @@
                 <label for="pages">Pages</label>
                 <input id="pages" name="pages" type="number">
 
-                <label for="description"></label>
+                <label for="description">Description</label>
                 <textarea id="description" name="description" rows="4"></textarea>
 
                 <button class="complete-form">Complete</button>
             </form>
         </dialog>
+
+        <dialog id="edit-book-dialog" aria-labelledby="form-title">
+            <form method="dialog">
+                <h2 id="form-title">Edit book</h2>
+                <label for="name">Book name</label>
+                <input id="name" name="name" autocomplete="name" required>
+
+                <label for="author">Author</label>
+                <input id="author" name="author">
+
+                <label for="pages">Pages</label>
+                <input id="pages" name="pages" type="number">
+
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="4"></textarea>
+
+                <div>
+                    <button class="cancel-edit">Cancel</button>
+                    <button class="edit-confirm">Edit</button>
+                </div>
+            </form>
+        </dialog>
         <script>
-            const dialog = document.querySelector("#add-book-dialog");
+            const dialog = document.querySelector("#edit-book-dialog");
 
             document.querySelector("#open-add-book-dialog").addEventListener("click", () => {
                 dialog.showModal();
@@ -55,6 +77,10 @@
                 <summary>More info</summary>
                 <p>hi</p>
             </details>
+            <div class="card-button">
+                <button class="edit-book">Edit</button>
+                <button class="read">Mark as finished</button>
+            </div>
         </div>
     </body>
 </html>

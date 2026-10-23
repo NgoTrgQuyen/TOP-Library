@@ -55,6 +55,17 @@ table {
     --card-padding: 1rem;
 }
 
+button {
+    box-shadow: 0 4px 0 #2456a8;
+    cursor: pointer;
+    transition: box-shadow 0.08s, background 0.08s;
+}
+
+button:active {
+    box-shadow: 0 1px 0 #2456a8;
+    background: #2d689c;
+}
+
 .top-section {
     padding: 3rem var(--page-padding);
     display: flex;
@@ -86,6 +97,7 @@ table {
     flex-direction: column;
     justify-content: space-between;
     gap: 0.75rem;
+    position: relative;
 }
 
 .card-detail {
@@ -112,6 +124,30 @@ table {
     font-size: var(--normal-font-size);
     width: max-content;
     user-select: none;
+}
+
+.card-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    gap: 8px;
+}
+
+.edit-book,
+.read {
+    width: max-content;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    background-color: green;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+.read {
+    background-color: rgb(0, 215, 0);
 }
 
 dialog {
@@ -147,7 +183,9 @@ textarea {
 }
 
 .close-form,
-.complete-form {
+.complete-form,
+.edit-confirm,
+.cancel-edit {
     width: max-content;
     font-size: 1.25rem;
     background-color: rgb(255, 0, 0);
@@ -157,10 +195,12 @@ textarea {
     justify-self: end;
 }
 
-.complete-form {
+.complete-form,
+.edit-confirm {
     background-color: rgb(2, 196, 2);
 }
 
 .close {
     justify-content: end;
 }
+
