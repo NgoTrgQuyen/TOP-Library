@@ -176,7 +176,8 @@ textarea {
     font: inherit;
 }
 
-#form-title {
+#form-title,
+#edit-form-title {
     justify-self: center;
     font-size: 1.5rem;
     font-weight: bold;
