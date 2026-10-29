@@ -50,29 +50,32 @@
 
                 <div>
                     <button type="button" class="cancel-edit">Cancel</button>
-                    <button type="button" class="edit-confirm">Edit</button>
+                    <button type="confirm" class="edit-confirm">Edit</button>
                 </div>
             </form>
         </dialog>
 
         <div class="page-line"></div>
-        <div class="card">
-            <div class="card-detail">
-                <h2>Name</h2>
-                <div class="metadata">
-                    <span class="author">Author</span>
-                    <span> | </span>
-                    <span clas="page">Pages</span>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-detail">
+                    <h2>Name</h2>
+                    <div class="metadata">
+                        <span class="author">Author</span>
+                        <span> | </span>
+                        <span clas="page">Pages</span>
+                    </div>
+                </div>
+                <details class="book-description">
+                    <summary>More info</summary>
+                    <p>hi</p>
+                </details>
+                <div class="card-button">
+                    <button class="edit-book">Edit</button>
+                    <button class="read">Mark as finished</button>
                 </div>
             </div>
-            <details class="book-description">
-                <summary>More info</summary>
-                <p>hi</p>
-            </details>
-            <div class="card-button">
-                <button class="edit-book">Edit</button>
-                <button class="read">Mark as finished</button>
-            </div>
         </div>
+        <div class="read-card-container"></div>
     </body>
 </html>

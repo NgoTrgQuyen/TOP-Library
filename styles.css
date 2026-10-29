@@ -88,9 +88,19 @@ button:active {
     border: 1px solid black;
 }
 
+.card-container,
+.read-card-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container {
+    margin-top: 3rem;
+}
+
 .card {
-    margin: 3rem var(--page-padding);
-    border: 1px solid black;
+    margin: 1rem var(--page-padding);
+    border: 2px solid rgb(255, 0, 0);
     border-radius: 8px;
     padding: var(--card-padding);
     display: flex;
@@ -98,6 +108,10 @@ button:active {
     justify-content: space-between;
     gap: 0.75rem;
     position: relative;
+}
+
+.card.finished {
+    border: 2px solid green;
 }
 
 .card-detail {
